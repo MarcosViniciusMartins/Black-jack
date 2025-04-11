@@ -1,9 +1,59 @@
-function criarBaralho() {
-  const naipes = ['♠', '♥', '♣', '♦']; 
-  const valores = ['2','3','4','5','6','7','8','9','10','J','Q','K','A'];
-  let cartas = [];
-  for (let naipe of naipes) {
-    for (let valor of valores) {
-      cartas.push({valor, naipe});
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Blackjack Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      margin-top: 50px;
     }
-}
+
+    h1 {
+      font-size: 3em;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    #resultado {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #444;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Blackjack</h1>
+  <p id="dealer">Banca:</p>
+  <p id="player">Jogador:</p>
+  <p id="resultado"></p>
+  <button onclick="pedirCarta()">Pedir Carta</button>
+  <button onclick="parar()">Parar</button>
+  <button onclick="iniciarJogo()">Reiniciar</button>
+
+  <script src="blackjack.js"></script>
+</body>
+</html>
